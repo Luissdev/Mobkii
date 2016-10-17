@@ -17,13 +17,13 @@ class Encuesta extends Model{
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['id', 'nombre', 'modelo_id', 'status'];
+	protected $fillable = ['id', 'nombre', 'id_modelo', 'status'];
 
-	public function encuesta_belong_modelo(){
+	public function modelo(){
 		return $this->belongsTo('Mobkii\Modelo');
 	}
 
-	public function encuesta_has_subdemografico(){
-		return $this->hasMany('Mobkii\DemograficoDetalle');
+	public function demografico(){
+		return $this->hasMany('Mobkii\Demografico');
 	}
 }

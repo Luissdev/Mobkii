@@ -17,9 +17,13 @@ class Demografico extends Model{
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['id', 'nombre', 'status'];
+	protected $fillable = ['id', 'nombre', 'status', 'id_encuesta'];
 
-	public function demografico_has_subdemografico(){
+	public function demografico_detalle(){
 		return $this->hasMany('Mobkii\DemograficoDetalle');
+	}
+
+	public function encuesta(){
+		return $this->belongsTo('Mobkii\Encuesta');
 	}
 }

@@ -19,7 +19,7 @@ class Modelo extends Model{
 	 */
 	protected $fillable = ['id', 'nombre', 'status'];
 
-	public function modelo_has_encuesta(){
+	public function encuestas(){
 		return $this->hasMany('Mobkii\Encuesta');
 	}
 

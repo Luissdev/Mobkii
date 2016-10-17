@@ -21,7 +21,6 @@
 					<th class="text-center">Acción</th>
 				</tr>
 			</thead>
-			@if(count($encuestas)>0)
 			@foreach($encuestas as $usr)
 			<tr>
 				<td>{{$usr->nombre}}</td>
@@ -58,5 +57,4 @@
 		</div>
 	</div>
 </div>
-@endif
 @endsection

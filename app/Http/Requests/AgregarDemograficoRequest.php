@@ -23,7 +23,7 @@ class AgregarDemograficoRequest extends Request {
 	{
 		return [
 		'nombre' => 'required',
-		'encuesta_id' => 'required',
+		'id_encuesta' => 'required',
 		];
 	}
 
