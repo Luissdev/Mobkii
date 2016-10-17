@@ -2,7 +2,7 @@
 
 use Mobkii\Http\Requests\Request;
 
-class AgregarDemograficoRequest extends Request {
+class ImportarCategorias extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -22,8 +22,7 @@ class AgregarDemograficoRequest extends Request {
 	public function rules()
 	{
 		return [
-		'nombre' => 'required',
-		'id_encuesta' => 'required',
+			'csv' => 'required',
 		];
 	}
 

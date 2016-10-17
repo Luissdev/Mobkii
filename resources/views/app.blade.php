@@ -46,7 +46,7 @@
                 <ul class="nav navbar-right top-nav">
                     @if (Auth::guest())
                     <li>
-                        <a href="/validacion/registro"><i class="fa fa-fw fa-user"></i> Registrarse</a>
+                    <a href="/validacion/registro"><i class="fa fa-fw fa-user"></i> Registrarse</a>
                     </li>
                     <li>
                         <a href="/validacion/inicio"><i class="fa fa-fw fa-envelope"></i> Iniciar sesión</a>
@@ -79,13 +79,16 @@
                             <a href="/"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="/auth/encuesta"><i class="fa fa-fw fa-bar-chart-o"></i> Encuesta</a>
+                            <a href="/auth/usuario"><i class="fa fa-fw fa-bar-chart-o"></i> Usuarios</a>
                         </li>
                         <li>
-                            <a href="/auth/usuario"><i class="fa fa-fw fa-bar-chart-o"></i> Formato</a>
+                            <a href="/auth/categoria"><i class="fa fa-fw fa-table"></i> Categorias</a>
                         </li>
                         <li>
-                        <a href="/auth/demografico"><i class="fa fa-fw fa-bar-chart-o"></i> Demografico</a>
+                            <a href="/auth/productos"><i class="fa fa-fw fa-edit"></i> Productos</a>
+                        </li>
+                        <li>
+                            <a href="/auth/pedidos"><i class="fa fa-fw fa-desktop"></i> Pedidos</a>
                         </li>
                     </ul>
                 </div>

@@ -1,9 +1,8 @@
 <?php namespace Mobkii\Http\Requests;
 
 use Mobkii\Http\Requests\Request;
-use Mobkii\Usuario;
 
-class AgregarUsuarioRequest extends Request {
+class EditarProductoRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -24,9 +23,9 @@ class AgregarUsuarioRequest extends Request {
 	{
 		return [
 			'nombre' => 'required',
-			'email' => 'required|email',
-			'password' => 'required|min:6|confirmed',
-			'admin' => 'required,',
+			'precio' => 'required',
+			'descripcion' => 'required',
+			'id_categoria' => 'required',
 			'status' => 'required',
 		];
 	}

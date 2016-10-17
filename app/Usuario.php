@@ -15,14 +15,14 @@ class Usuario extends Model implements AuthenticatableContract, CanResetPassword
 	 *
 	 * @var string
 	 */
-	protected $table = 'usuario';
+	protected $table = 'usuarios';
 
 	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['id', 'nombre', 'email', 'password', 'direccion','info', 'status'];
+	protected $fillable = ['id', 'nombre', 'email', 'password', 'direccion','info', 'status'/*, 'id_negocio'*/];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -30,4 +30,12 @@ class Usuario extends Model implements AuthenticatableContract, CanResetPassword
 	 * @var array
 	 */
 	protected $hidden = ['password', 'remember_token'];
+/*
+	public function negocio(){
+		return $this->belongsTo('Mobkii\Negocio');
+	}*/
+
+	public function pedidos(){
+		return $this->belongsToMany('Mobkii\Pedido');
+	}
 }

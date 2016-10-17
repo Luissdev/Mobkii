@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CrearTablaDemografico extends Migration {
+class CrearTablaNegocio extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,15 @@ class CrearTablaDemografico extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('demografico', function(Blueprint $table)
+		Schema::create('negocio', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('nombre');
+			$table->string('email')->unique();
+			$table->string('password', 60);
+			$table->string('descripcion');
 			$table->smallInteger('status');
-			$table->Integer('id_encuesta')->unsigned();
-			$table->foreign('id_encuesta')->references('id')->on('encuesta');
+			$table->rememberToken();
 			$table->timestamps();
 		});
 	}
@@ -30,7 +32,7 @@ class CrearTablaDemografico extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('demografico');
+		Schema::drop('negocio');
 	}
 
 }

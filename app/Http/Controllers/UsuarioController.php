@@ -74,7 +74,7 @@ class UsuarioController extends Controller {
 			'status' => $request->get('status'),
 			]);
 
-		return redirect('auth/usuario')->with("succes", "El usuario fue agregadocorrectamente");
+		return(redirect('auth/usuario'));
 	}
 
 	public function getImportarUsuario(){
